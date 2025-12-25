@@ -61,7 +61,7 @@ tail -f /var/log/bnb-monitor.log
 如果看到以下输出，说明部署成功：
 ```
 [2025-12-25 11:38:46] 开始监控BNB余额
-监控地址: 0x748d173c03e1a2caa5b7c7ee81c8aac05fd03938
+监控地址: 0X地址
 余额阈值: 0.01 BNB
 检查间隔: 300 秒
 --------------------------------------------------
@@ -83,9 +83,11 @@ pip3 install -r requirements.txt
 编辑 `bnb_monitor.py` 文件，修改以下参数：
 
 ```python
-MONITOR_ADDRESS = "0x你的地址"  # 替换为要监控的BSC地址
+MONITOR_ADDRESS = "0x地址"  # 替换为要监控的BSC地址
 THRESHOLD = 0.01  # 余额阈值（BNB）
 CHECK_INTERVAL = 300  # 检查间隔（秒），默认5分钟
+WEBHOOK_URL = "你自己的webhook url" #下载 https://echobell.one/   填写邀请码4PSNG2QA获得100积分
+
 ```
 
 ## 运行方式
