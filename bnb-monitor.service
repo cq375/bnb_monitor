@@ -1,0 +1,17 @@
+[Unit]
+Description=BNB Balance Monitor Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/hashfind
+ExecStart=/usr/bin/python3 /root/hashfind/bnb_monitor.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/bnb-monitor.log
+StandardError=append:/var/log/bnb-monitor.log
+
+[Install]
+WantedBy=multi-user.target
